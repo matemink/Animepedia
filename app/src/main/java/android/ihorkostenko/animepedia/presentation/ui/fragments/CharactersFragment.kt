@@ -30,7 +30,7 @@ class CharactersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycleView.adapter = charactersRecyclerViewAdapter
+        recyclerView.adapter = charactersRecyclerViewAdapter
         charactersViewModel.init()
         charactersViewModel.characters.observe(this, Observer<Characters> { characters ->
             if (view is RecyclerView) {

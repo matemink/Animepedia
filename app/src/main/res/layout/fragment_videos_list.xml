@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="android.ihorkostenko.animepedia.presentation.ui.viewmodels.PicturesViewModel" />
+            type="android.ihorkostenko.animepedia.presentation.ui.viewmodels.VideosViewModel" />
     </data>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -20,6 +20,6 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         tools:context="android.ihorkostenko.animepedia.presentation.MainActivity"
-        tools:listitem="@layout/item_picture" />
+        tools:listitem="@layout/item_video" />
 
 </layout>

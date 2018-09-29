@@ -11,12 +11,9 @@
     </data>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:name="animepedia.android.ihorkostenko.animepedia.presentation.CharactersFragment"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:clipToPadding="false"
         android:paddingBottom="60dp"
         android:scrollbars="vertical"

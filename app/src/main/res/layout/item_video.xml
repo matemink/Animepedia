@@ -8,14 +8,14 @@
 
         <variable
             name="data"
-            type="android.ihorkostenko.animepedia.domain.entities.Picture" />
+            type="android.ihorkostenko.animepedia.domain.entities.VideoEpisode" />
     </data>
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="230dp"
+        android:layout_width="200dp"
+        android:layout_height="113dp"
         android:layout_margin="@dimen/text_margin"
         android:textAppearance="?attr/textAppearanceListItem"
-        app:imageUrl="@{data.large}"
+        app:imageUrl="@{data.image_url}"
         tools:src="@drawable/ic_launcher_background" />
 </layout>

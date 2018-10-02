@@ -30,7 +30,7 @@ class PicturesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recycleView.adapter = picturesRecyclerViewAdapter
+        recyclerView.adapter = picturesRecyclerViewAdapter
         picturesViewModel.init()
         picturesViewModel.pictures.observe(this, Observer<Pictures> { pictures ->
             if (view is RecyclerView) {

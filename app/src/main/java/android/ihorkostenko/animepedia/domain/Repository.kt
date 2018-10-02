@@ -22,6 +22,12 @@ class Repository(private val apiDataSource: AnimeApiDataSource) {
         return characters
     }
 
+    fun getCharactersSync(): LiveData<Characters> {
+        val characters = MutableLiveData<Characters>()
+        characters.value = apiDataSource.getCharacters().execute().body()
+        return characters
+    }
+
     fun getEpisodes(): LiveData<Episodes> {
         val episodes = MutableLiveData<Episodes>()
         apiDataSource.getEpisodes().enqueue(object : retrofit2.Callback<Episodes> {

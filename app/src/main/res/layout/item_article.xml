@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="android.ihorkostenko.animepedia.domain.entities.Article" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="113dp"
+            android:layout_height="169dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:imageUrl="@{data.image_url}"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="@{data.title}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                tools:text="'Cowboy Bebop' Receives Live-Action TV Series" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:maxLines="4"
+                android:singleLine="false"
+                android:text="@{data.intro}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                tools:text="Tomorrow Studios, a joint venture between producer Marty Adelstein and ITV Studios, has been announced to adapt the 1998 anime Cowboy Bebop into a live action TV ser..." />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
